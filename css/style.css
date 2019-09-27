@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: 'Merriweather', serif;
+}
+
 ::-moz-selection {
   background-color: black;
   color: white;
@@ -26,7 +30,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   background-color: white;
 }
 
@@ -57,8 +61,15 @@ header .row div ul li a {
   border: 1px solid white;
 }
 
+.mission {
+  background-image: url("../img/hero_1_no-text.jpg");
+  background-attachment: fixed;
+  position: relative;
+}
+
 .mission .container .row div {
   position: relative;
+  z-index: 1;
 }
 
 .mission .container .row div img {
@@ -69,6 +80,105 @@ header .row div ul li a {
   position: absolute;
   top: 50%;
   left: 35%;
+}
+
+.mission .container .statsitic div {
+  text-align: center;
+  z-index: 1;
+}
+
+.mission .container .statsitic div span {
+  color: #fd5f00;
+  font-size: 4em;
+}
+
+.mission::after,
+.donate::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #8a7604;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.school .container .row div .text-center {
+  width: 50%;
+}
+
+.school .container .row div img {
+  width: 100%;
+}
+
+.school .container .row div div div div span {
+  color: #fd5f00;
+  font-size: 4em;
+}
+
+.school .container .row .text-holder {
+  padding: 3em;
+}
+
+.donate {
+  background-image: url("../img/hero_1_no-text.jpg");
+  background-attachment: fixed;
+  position: relative;
+}
+
+.donate .container .row div .text-center {
+  z-index: 1;
+  width: 40%;
+}
+
+.donate .container .row div .text-center button {
+  background: #e67e22;
+}
+
+.offers .container .row div span {
+  font-size: 4em;
+}
+
+.offers .container .row div h3 {
+  color: #fd5f00;
+}
+
+.cart .container .row div .text-center {
+  width: 50%;
+}
+
+.cart .container .row div .text-center h2 {
+  font-weight: bolder;
+}
+
+.cart .container .row div .card {
+  padding: 1em;
+}
+
+.cart .container .row div .card img {
+  width: 50%;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.cart .container .row div .card .card-body ul {
+  padding: 0;
+  margin: 0;
+}
+
+.cart .container .row div .card .card-body ul li {
+  display: inline;
+}
+
+.cart .container .row div .card .card-body ul li a {
+  font-size: 2em;
+  color: #fd5f00;
+  -webkit-transition-duration: .8s;
+          transition-duration: .8s;
 }
 
 @media screen and (max-width: 315px) {

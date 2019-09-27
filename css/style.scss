@@ -1,39 +1,50 @@
 $maincolor:#fd5f00;
-*{
+
+* {
     box-sizing: border-box;
 }
-img{
+
+img {
     object-fit: cover;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
-::selection{
+body {
+    font-family: 'Merriweather', serif;
+}
+
+::selection {
     background-color: black;
     color: white;
 }
 
-header{
+header {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 10;
     background-color: white;
-    .row{
-        div{
-            .logo{
-                a{
+
+    .row {
+        div {
+            .logo {
+                a {
                     color: $maincolor;
                     font-size: 2em;
                 }
             }
-            ul{
+
+            ul {
                 padding: 0;
                 margin: 0;
-                li{
+
+                li {
                     display: inline;
                     padding: 0.8em;
-                    a{
+
+                    a {
                         color: black;
                     }
                 }
@@ -41,41 +52,190 @@ header{
         }
     }
 }
-.courage{
-    div{
-        .row{
-            div{
+
+.courage {
+    div {
+        .row {
+            div {
                 padding: 1.5em;
-                .orphan{
-                    border:1px solid white;
+
+                .orphan {
+                    border: 1px solid white;
                 }
             }
         }
     }
 }
-.mission{
-    .container{
-        .row{
-            div{
+
+.mission {
+    background-image: url("../img/hero_1_no-text.jpg");
+    background-attachment: fixed;
+    position: relative;
+
+    .container {
+        .row {
+            div {
                 position: relative;
-                img{
-                    width:80%;
+                z-index: 1;
+
+                img {
+                    width: 80%;
                 }
-                button{
+
+                button {
                     position: absolute;
                     top: 50%;
-                    left:35%;
+                    left: 35%;
+                }
+            }
+        }
+
+        .statsitic {
+            div {
+                text-align: center;
+                z-index: 1;
+
+                span {
+                    color: $maincolor;
+                    font-size: 4em;
                 }
             }
         }
     }
 }
-@media screen and (max-width:315px){
-    header{
-        .row{
-            .logo{
-                a{
-                    font-size:1em !important;
+
+.mission::after,
+.donate::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgb(138, 118, 4);
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.school {
+    .container {
+        .row {
+            div {
+                .text-center {
+                    width: 50%;
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                div {
+                    div {
+                        div {
+                            span {
+                                color: $maincolor;
+                                font-size: 4em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .text-holder {
+                padding: 3em;
+            }
+        }
+    }
+}
+
+.donate {
+    background-image: url("../img/hero_1_no-text.jpg");
+    background-attachment: fixed;
+    position: relative;
+
+    .container {
+        .row {
+            div {
+                .text-center {
+                    z-index: 1;
+                    width: 40%;
+
+                    button {
+                        background: #e67e22;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.offers {
+    .container {
+        .row {
+            div {
+                span {
+                    font-size: 4em;
+                }
+
+                h3 {
+                    color: $maincolor;
+                }
+            }
+        }
+    }
+}
+
+.cart {
+    .container {
+        .row {
+            div {
+                .text-center {
+                    width: 50%;
+
+                    h2 {
+                        font-weight: bolder;
+                    }
+                }
+
+                .card {
+                    padding: 1em;
+
+                    img {
+                        width: 50%;
+                        margin: auto;
+                        border-radius: 50%;
+                    }
+
+                    .card-body {
+                        ul {
+                            padding: 0;
+                            margin: 0;
+
+                            li {
+                                display: inline;
+
+                                a {
+                                    font-size: 2em;
+                                    color: $maincolor;
+                                    transition-duration: .8s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:315px) {
+    header {
+        .row {
+            .logo {
+                a {
+                    font-size: 1em !important;
                 }
             }
         }
