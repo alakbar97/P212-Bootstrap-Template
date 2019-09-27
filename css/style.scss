@@ -1,0 +1,83 @@
+$maincolor:#fd5f00;
+*{
+    box-sizing: border-box;
+}
+img{
+    object-fit: cover;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+::selection{
+    background-color: black;
+    color: white;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    .row{
+        div{
+            .logo{
+                a{
+                    color: $maincolor;
+                    font-size: 2em;
+                }
+            }
+            ul{
+                padding: 0;
+                margin: 0;
+                li{
+                    display: inline;
+                    padding: 0.8em;
+                    a{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+.courage{
+    div{
+        .row{
+            div{
+                padding: 1.5em;
+                .orphan{
+                    border:1px solid white;
+                }
+            }
+        }
+    }
+}
+.mission{
+    .container{
+        .row{
+            div{
+                position: relative;
+                img{
+                    width:80%;
+                }
+                button{
+                    position: absolute;
+                    top: 50%;
+                    left:35%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:315px){
+    header{
+        .row{
+            .logo{
+                a{
+                    font-size:1em !important;
+                }
+            }
+        }
+    }
+}

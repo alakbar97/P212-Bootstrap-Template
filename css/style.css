@@ -1,0 +1,79 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-moz-selection {
+  background-color: black;
+  color: white;
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+}
+
+header .row div .logo a {
+  color: #fd5f00;
+  font-size: 2em;
+}
+
+header .row div ul {
+  padding: 0;
+  margin: 0;
+}
+
+header .row div ul li {
+  display: inline;
+  padding: 0.8em;
+}
+
+header .row div ul li a {
+  color: black;
+}
+
+.courage div .row div {
+  padding: 1.5em;
+}
+
+.courage div .row div .orphan {
+  border: 1px solid white;
+}
+
+.mission .container .row div {
+  position: relative;
+}
+
+.mission .container .row div img {
+  width: 80%;
+}
+
+.mission .container .row div button {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+}
+
+@media screen and (max-width: 315px) {
+  header .row .logo a {
+    font-size: 1em !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
